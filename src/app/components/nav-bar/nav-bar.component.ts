@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, signal, ViewEncapsulation } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -13,9 +13,9 @@ import {MatIconModule} from '@angular/material/icon';
   styleUrl: './nav-bar.component.scss',
 })
 export class NavBarComponent {
-  isMenuOpen = false;
+  isMenuOpen = signal<boolean>(false);
 
   toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
+    this.isMenuOpen.set(!this.isMenuOpen());
   }
 }

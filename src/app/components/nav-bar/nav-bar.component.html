@@ -4,11 +4,11 @@
         <span class="brand-text gradient-text typing-effect">YPS Academy</span>
     </div>
     
-    <button mat-icon-button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
-        <mat-icon>{{ isMenuOpen ? 'close' : 'menu' }}</mat-icon>
+    <button mat-icon-button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen()">
+        <mat-icon>{{ isMenuOpen() ? 'close' : 'menu' }}</mat-icon>
     </button>
 
-    <div class="nav-links" [class.open]="isMenuOpen">
+    <div class="nav-links" [class.open]="isMenuOpen()">
         <a mat-button routerLink="/" class="nav-link hover-effect">
             <mat-icon>home</mat-icon>
             <span>Home</span>

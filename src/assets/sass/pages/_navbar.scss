@@ -2,6 +2,7 @@
     background-color: $gray-900 !important;
     justify-content: space-around;
     font-family: 'Ubuntu', sans-serif;
+    
     .menu-toggle {
         display: none;
       }
@@ -62,14 +63,14 @@
     .sign-in-button {
         transition: all 0.3s ease;
         font-family: 'Ubuntu', sans-serif !important;
-        background-color: $gray-900 !important;
+        background-color: $accent-color !important;
         border: 1px solid transparent !important;
         color: $gray-300 !important;
-
+        height: 20px !important;
         &:hover {
             transform: translateY(-1px);
         border-bottom: 1px solid $white !important;
-        color: $secondary-color !important;
+        color: $primary-dark !important;
 
         }
     }
@@ -78,6 +79,7 @@
 
 @media screen and (max-width: 768px) {
     .navbar-main {
+    
       .menu-toggle {
         display: block;
         margin-left: auto;
@@ -116,3 +118,5 @@
       }
     }
   }
+
+

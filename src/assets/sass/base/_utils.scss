@@ -1,0 +1,33 @@
+a{
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Ubuntu', sans-serif !important;
+    color: $gray-300 !important;
+
+    &:hover {
+        transform: translateY(-1px);
+        // border-bottom: 1px solid $white !important;
+        color: $secondary-color !important;
+    }
+}
+
+.container-modified {
+    max-width: 1512px;
+    margin: 0 auto;
+    padding: 0 20px;
+    @media screen and (max-width: 1200px) {
+        padding: 0 10px;
+        max-width: 768px;
+        
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0 10px;
+        max-width: 600px;
+        
+    }
+    @media screen and (max-width: 576px) {
+        padding: 0 10px;
+        max-width: 400px;
+        
+    }
+}
