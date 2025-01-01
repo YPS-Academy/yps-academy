@@ -2,6 +2,13 @@
     background-color: $gray-900 !important;
     justify-content: space-around;
     font-family: 'Ubuntu', sans-serif;
+    .menu-toggle {
+        display: none;
+      }
+    
+      .mobile-sign-in {
+        display: none;
+      }
 
     .navbar-brand {
         display: flex;
@@ -40,6 +47,18 @@
       
     }
 
+    .menu-toggle {
+        display: none;
+        font-size: 1.5rem;
+        color: $gray-300;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-1px);
+            color: $secondary-color;
+        }
+    }
     .sign-in-button {
         transition: all 0.3s ease;
         font-family: 'Ubuntu', sans-serif !important;
@@ -55,3 +74,45 @@
         }
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    .navbar-main {
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+  
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: $gray-900;
+        flex-direction: column;
+        padding: 16px;
+        z-index: 1000;
+  
+        &.open {
+          display: flex;
+        }
+  
+        .nav-link {
+          width: 100%;
+          margin: 8px 0;
+          padding: 30px 16px !important;
+        }
+      }
+  
+      .desktop-sign-in {
+        display: none;
+      }
+  
+      .mobile-sign-in {
+        display: block;
+        width: 100%;
+        margin-top: 16px;
+      }
+    }
+  }

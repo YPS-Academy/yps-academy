@@ -3,24 +3,30 @@
         <img src="apple-touch-icon.png" alt="Logo" class="logo">
         <span class="brand-text gradient-text typing-effect">YPS Academy</span>
     </div>
-    <!-- <span class="spacer"></span> -->
-    <div class="nav-links">
-            <a mat-button routerLink="/" class="nav-link hover-effect">
-                <mat-icon>home</mat-icon>
-                <span>Home</span>
-            </a>
-            <a mat-button routerLink="/features" class="nav-link hover-effect">
-                <mat-icon>stars</mat-icon>
-                <span>About Us</span>
-            </a>
-            <a mat-button routerLink="/pricing" class="nav-link hover-effect">
-                <mat-icon>insert_photo</mat-icon>
-                <span>Gallery</span>
-            </a>
-            <a mat-button routerLink="/contact" class="nav-link hover-effect">
-                <mat-icon>contact_support</mat-icon>
-                <span>Contact</span>
-            </a>
-  </div>
-  <button mat-raised-button  class="sign-in-button">Sign In</button>
+    
+    <button mat-icon-button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+        <mat-icon>{{ isMenuOpen ? 'close' : 'menu' }}</mat-icon>
+    </button>
+
+    <div class="nav-links" [class.open]="isMenuOpen">
+        <a mat-button routerLink="/" class="nav-link hover-effect">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </a>
+        <a mat-button routerLink="/features" class="nav-link hover-effect">
+            <mat-icon>stars</mat-icon>
+            <span>About Us</span>
+        </a>
+        <a mat-button routerLink="/pricing" class="nav-link hover-effect">
+            <mat-icon>insert_photo</mat-icon>
+            <span>Gallery</span>
+        </a>
+        <a mat-button routerLink="/contact" class="nav-link hover-effect">
+            <mat-icon>contact_support</mat-icon>
+            <span>Contact</span>
+        </a>
+        <button mat-raised-button class="sign-in-button mobile-sign-in">Sign In</button>
+    </div>
+    
+    <button mat-raised-button class="sign-in-button desktop-sign-in">Sign In</button>
 </mat-toolbar>

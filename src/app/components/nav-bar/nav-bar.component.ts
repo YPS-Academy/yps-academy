@@ -13,5 +13,9 @@ import {MatIconModule} from '@angular/material/icon';
   styleUrl: './nav-bar.component.scss',
 })
 export class NavBarComponent {
+  isMenuOpen = false;
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
