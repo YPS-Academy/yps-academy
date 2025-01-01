@@ -1,0 +1,32 @@
+
+// Primary Colors
+$primary-color: #4CAF50;      // Green (Primary brand color)
+$primary-dark: #388E3C;       // Darker shade for hover or active states
+$primary-light: #C8E6C9;      // Lighter shade for backgrounds or highlights
+
+// Secondary Colors
+$secondary-color: #FF9800;    // Orange (Secondary brand color)
+$secondary-dark: #F57C00;     // Darker shade for hover or active states
+$secondary-light: #FFE0B2;    // Lighter shade for backgrounds or highlights
+
+// Accent Colors
+$accent-color: #673AB7;       // Purple (For accents like buttons or links)
+$accent-light: #D1C4E9;       // Lighter shade for subtle accents
+
+// Neutral Colors
+$white: #FFFFFF;              // White
+$black: #000000;              // Black
+$gray-100: #F5F5F5;           // Light gray (Backgrounds)
+$gray-300: #E0E0E0;           // Medium gray (Borders, dividers)
+$gray-600: #757575;           // Dark gray (Text)
+$gray-900: #212121;           // Almost black (Text)
+
+// Utility Colors
+$success-color: #4CAF50;      // Green (Success messages or alerts)
+$error-color: #F44336;        // Red (Error messages or alerts)
+$warning-color: #FFEB3B;      // Yellow (Warnings)
+$info-color: #2196F3;         // Blue (Info messages or highlights)
+
+// Gradients
+$gradient-primary: linear-gradient(to right, #4CAF50, #388E3C);
+$gradient-secondary: linear-gradient(to right,  #fff, #75c64c, #F57C00);

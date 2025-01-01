@@ -1,0 +1,57 @@
+.navbar-main {
+    background-color: $gray-900 !important;
+    justify-content: space-around;
+    font-family: 'Ubuntu', sans-serif;
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        // letter-spacing: 0.5px;
+        font-family: 'Ubuntu', sans-serif;
+
+        .logo {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: scale-up 3 infinite fill-mode;
+        }
+    }
+
+    .nav-link {
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-family: 'Ubuntu', sans-serif !important;
+        color: $gray-300 !important;
+        border: 1px solid transparent !important;
+        height: 20px !important;
+        padding: 5px 10px !important;
+        font-weight: 400 !important;
+        box-shadow:0 2px 2px rgb(5 5 5 / 30%) !important;
+        margin-right: 5px;
+        
+        &:hover {
+            transform: translateY(-1px);
+            border-bottom: 1px solid $white !important;
+            color: $secondary-color !important;
+        }
+      
+    }
+
+    .sign-in-button {
+        transition: all 0.3s ease;
+        font-family: 'Ubuntu', sans-serif !important;
+        background-color: $gray-900 !important;
+        border: 1px solid transparent !important;
+        color: $gray-300 !important;
+
+        &:hover {
+            transform: translateY(-1px);
+        border-bottom: 1px solid $white !important;
+        color: $secondary-color !important;
+
+        }
+    }
+}

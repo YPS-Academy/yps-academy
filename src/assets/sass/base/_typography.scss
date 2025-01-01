@@ -1,0 +1,54 @@
+.primary-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $gray-900;
+    margin-bottom: 0.75rem;
+}
+
+.secondary-heading {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $gray-900;
+    margin-bottom: 0.75rem;
+}
+
+.dark-text-content {
+    font-size: 1rem;
+    font-weight: 300;
+    color: $black;
+    margin-bottom: 0.75rem;
+}
+
+.dark-text-content {
+    font-size: 1rem;
+    font-weight: 300;
+    color: $gray-900;
+    margin-bottom: 0.75rem;
+}
+
+
+
+
+.gradient-text {
+    background: $gradient-secondary;
+    -webkit-background-clip: text; // Clips the gradient to the text
+    -webkit-text-fill-color: transparent; // Makes the text fill transparent to show the gradient
+    font-weight: bold; // Optional: Adjust font weight for emphasis
+
+    &-animation {
+        animation: gradient-animation 3s infinite; // Optional: Add animation for a gradient effect
+    }
+}
+
+
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #fff;
+    width: 0;
+    animation: 
+      typing 10s steps(50, end) forwards infinite,
+      blink-caret 1s step-end infinite,
+      fade-in 0.5s ease-in forwards;
+  }
+  
