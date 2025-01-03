@@ -1,12 +1,12 @@
 .container {
-  padding: 84px 10px !important;
+//   padding: 84px 10px !important;
   .login-container {
       display: flex;
       justify-content: center;
       align-items: center;
       height: auto;
-
-
+      padding: 84px 0 !important;
+    color: $gray-900 !important;
 
       .login-box {
           width: 100%;

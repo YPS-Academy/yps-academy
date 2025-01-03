@@ -1,0 +1,32 @@
+.dev-banner {
+  background: linear-gradient(90deg, #dd9393, #bbf6f2);
+  color: red;
+//   padding-top: 60px;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+  font-weight: 500;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.sliding-text {
+  animation: slide 20s linear infinite;
+  white-space: nowrap;
+  padding: 0 16px;
+  font-size: 1rem;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
