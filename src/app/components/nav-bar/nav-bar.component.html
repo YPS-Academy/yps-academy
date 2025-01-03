@@ -9,24 +9,24 @@
     </button>
 
     <div class="nav-links" [class.open]="isMenuOpen()">
-        <a mat-button routerLink="/" class="nav-link hover-effect">
+        <a mat-button routerLink="/" class="nav-link hover-effect" (click)="closeMenu()">
             <mat-icon>home</mat-icon>
             <span>Home</span>
         </a>
-        <a mat-button routerLink="#" class="nav-link hover-effect">
+        <a mat-button routerLink="#" class="nav-link hover-effect" (click)="closeMenu()">
             <mat-icon>stars</mat-icon>
             <span>About Us</span>
         </a>
-        <a mat-button routerLink="#" class="nav-link hover-effect">
+        <a mat-button routerLink="#" class="nav-link hover-effect" (click)="closeMenu()">
             <mat-icon>insert_photo</mat-icon>
             <span>Gallery</span>
         </a>
-        <a mat-button routerLink="#" class="nav-link hover-effect">
+        <a mat-button routerLink="#" class="nav-link hover-effect" (click)="closeMenu()">
             <mat-icon>contact_support</mat-icon>
             <span>Contact</span>
         </a>
         <button mat-raised-button class="sign-in-button mobile-sign-in" (click)="onLoginClick()">Sign In</button>
     </div>
-    
     <button mat-raised-button class="sign-in-button desktop-sign-in" (click)="onLoginClick()">Sign In</button>
+    
 </mat-toolbar>

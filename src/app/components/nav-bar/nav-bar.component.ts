@@ -21,12 +21,16 @@ export class NavBarComponent {
 
   }
 
-
-  onLoginClick() {
-    this._router.navigate(['/login']);
+  closeMenu() {
+    this.isMenuOpen.set(false);
   }
 
   toggleMenu() {
-    this.isMenuOpen.set(!this.isMenuOpen());
+    this.isMenuOpen.update(state => !state);
+  }
+
+  onLoginClick() {
+    this.closeMenu();
+    this._router.navigate(['/login']);
   }
 }
