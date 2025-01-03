@@ -54,3 +54,45 @@
       opacity: 1;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .navbar-main {
+    
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+  
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: $gray-900;
+        flex-direction: column;
+        padding: 16px;
+        z-index: 1000;
+  
+        &.open {
+          display: flex;
+        }
+  
+        .nav-link {
+          width: 100%;
+          margin: 8px 0;
+          padding: 30px 16px !important;
+        }
+      }
+  
+      .desktop-sign-in {
+        display: none;
+      }
+  
+      .mobile-sign-in {
+        display: block;
+        width: 100%;
+        margin-top: 16px;
+      }
+    }
+  }
