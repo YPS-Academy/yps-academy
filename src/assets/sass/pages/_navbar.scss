@@ -67,6 +67,8 @@
         border: 1px solid transparent !important;
         color: $gray-300 !important;
         height: 20px !important;
+        padding: 10px 20px !important;
+
         &:hover {
             transform: translateY(-1px);
         border-bottom: 1px solid $white !important;

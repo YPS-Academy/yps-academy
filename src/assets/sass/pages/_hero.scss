@@ -36,6 +36,10 @@
       color: white;
       padding: 2rem;
       max-width: 800px;
+      .mobile-text {
+        white-space: normal;
+        line-height: 1.5;
+      }
       @media screen and (max-width: 768px) {
         padding: 1rem;
         max-width: 500px;

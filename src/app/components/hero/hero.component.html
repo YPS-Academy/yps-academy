@@ -2,8 +2,10 @@
    <div class="container-modified">
     <div class="background-image"></div>
     <div class="hero-content">
-        <h1 class="gradient-text gradient-text-animation">{{ title }}</h1>
-        <p class="typing-effect">{{ description }}</p>    
+        <h1 class="gradient-text gradient-text-animation">{{ title() }}</h1>
+        <p [class.typing-effect]="!isMobile()" [class.mobile-text]="isMobile()">
+          {{ isMobile() ? fullText() : displayText() }}
+        </p>    
     </div>
    </div>
 </div>
