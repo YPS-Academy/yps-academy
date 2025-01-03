@@ -15,9 +15,7 @@
           border: 1px solid #ccc;
           border-radius: 8px;
           box-shadow: 4px 4px 11px 0px rgba(250, 205, 205, 0.55);
-          // background: linear-gradient(45deg, #d2e6f1 0%, #a2d7f2 50%, #c1e14b 100%);
           background: $gradient-primary;
-          // animation: gradientBG 15s ease infinite;
 
 
           @keyframes gradientBG {
