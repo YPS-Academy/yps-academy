@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="navbar-main">
-    <div class="navbar-brand">
+    <div class="navbar-brand" routerLink="/">
         <img src="apple-touch-icon.png" alt="Logo" class="logo">
         <span class="brand-text gradient-text typing-effect">YPS Academy</span>
     </div>
@@ -25,8 +25,8 @@
             <mat-icon>contact_support</mat-icon>
             <span>Contact</span>
         </a>
-        <button mat-raised-button class="sign-in-button mobile-sign-in" (click)="onLoginClick()">Sign In</button>
+        <button mat-raised-button class="sign-in-button mobile-sign-in" matTooltip="Click to login"  (click)="onLoginClick()">Sign In</button>
     </div>
-    <button mat-raised-button class="sign-in-button desktop-sign-in" (click)="onLoginClick()">Sign In</button>
+    <button mat-raised-button class="sign-in-button desktop-sign-in" matTooltip="Click to login" (click)="onLoginClick()">Sign In</button>
     
 </mat-toolbar>
