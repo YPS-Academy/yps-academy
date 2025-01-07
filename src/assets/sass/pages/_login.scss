@@ -6,7 +6,7 @@
       align-items: center;
       height: auto;
       padding: 84px 0 !important;
-    color: $gray-900 !important;
+      color: $gray-900 !important;
 
       .login-box {
           width: 100%;
@@ -21,10 +21,23 @@
             box-shadow: 4px 4px 11px 0px rgba(231, 21, 21, 0.55);
           }
 
+          .userHasAccount{
+                         
+              flex-direction: row;
+             
+          }
+
           .actions {
               display: flex;
               justify-content: flex-end;
               margin-top: 1em;
+              a{
+                color: $gray-900 !important;
+                cursor: pointer;
+                &:hover,&:focus, &:active {
+                  color: $info-color !important;
+                }
+              }
           }
 
           .full-width {
