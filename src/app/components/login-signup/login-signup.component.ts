@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSnackBarService } from '../../services/mat-snack-bar.service';
 import { CreateFormsService } from '../../services/create-forms.service';
+import { LoginService } from '../../services/login.service';
 
 
 
@@ -26,25 +27,51 @@ export class LoginSignupComponent implements OnInit {
 
 
   registrationForm!: FormGroup;
+  loginForm!: FormGroup;
+
   errorMessage = signal('');
   private _matSnackBarService = inject(MatSnackBarService);
   private _createFormsService = inject(CreateFormsService);
+  private _loginService = inject(LoginService);
 
   constructor(private _router: Router) {
     this.registrationForm = this._createFormsService.createregistrationForm();
+    this.loginForm = this._createFormsService.createLoginForm();
   }
 
   ngOnInit(): void {
-
   }
   onSubmit() {
-    if (this.registrationForm.valid) {
-      console.log(this.registrationForm.value);
-      this._router.navigate(['/stud-dashboard']);
-      this._matSnackBarService.openSnackBar('Login Successful', 'Close');
+    if (!this.userHasAccount) {
+      if (this.registrationForm.valid) {
 
-    } else {
-      this.errorMessage = signal('Please enter All details');
+        console.log(this.registrationForm.value);
+        this._loginService.registerUser(this.registrationForm.value).subscribe((res) => {
+          if (res) {
+            // this._router.navigate(['/stud-dashboard']);
+            this._matSnackBarService.openSnackBar('User registered succesfully', 'Close');
+          }
+        });
+      }else {
+        this.errorMessage = signal('Please enter All details');
+      }
+      
+     
+    }  else {
+
+      console.log(this.loginForm.value);
+      if(this.loginForm.valid) {
+      this._loginService.loginUser(this.loginForm.value)
+      // .subscribe((res:any) => {
+      //   if(res) {
+      //     this._router.navigate(['/stud-dashboard']);
+      //     this._matSnackBarService.openSnackBar('User logged in succesfully', 'Close');
+      //   }
+      // });
+      }else{
+        this.errorMessage = signal('Please enter All details');
+
+      }
     }
   }
 
