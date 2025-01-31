@@ -1,0 +1,22 @@
+.ourToper-section{
+    padding: 20px 0px;
+}
+.example-card {
+    max-width: 400px;
+    // color: $gray-600 !important;
+    color: #757575 !important;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .card-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center !important;
+  }
+  

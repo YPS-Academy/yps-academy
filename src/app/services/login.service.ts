@@ -20,16 +20,18 @@ export class LoginService {
 
 
   loginUser(user: IUser) {
-    console.log("existing user details",user);    
-    this._http.get(this.baseURL + "users.json").subscribe((res:any) => {
-      console.log(res);
-      for(let key in res){
-        if(res[key].email === user.email && res[key].password === user.password){
-          alert("user logged in");
-        }else{
-          alert("user not found");
-        }
-      }
-    })
+    console.log("existing user details",user);  
+    const mesg = true;
+    return mesg;  
+    // this._http.get(this.baseURL + "users.json").subscribe((res:any) => {
+    //   console.log(res);
+    //   for(let key in res){
+    //     if(res[key].email === user.email && res[key].password === user.password){
+    //       alert("user logged in");
+    //     }else{
+    //       alert("user not found");
+    //     }
+    //   }
+    // })
   }
 }
