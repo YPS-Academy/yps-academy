@@ -1,1 +1,14 @@
 <app-hero></app-hero>
+
+<!-- <div class="container"> -->
+
+    <div class="our-container">
+        <div class="flex-grid">
+            @for(student of topperStudents; track student.id) {
+                <div class="flex-item">
+                    <app-our-result [Students]="student"></app-our-result>
+                </div>
+            }
+        </div>
+    </div>
+<!-- </div> -->

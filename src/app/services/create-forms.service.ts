@@ -30,4 +30,17 @@ export class CreateFormsService {
       password: ['', [Validators.required, Validators.minLength(6)]],
     })
   }
+
+  createStdRegForm(){
+    return this._fb.group({
+      firstName: ['', [Validators.required]],
+      middleName:['', Validators.required],
+      lastName: ['', Validators.required],
+      class:['', Validators.required],
+      schoolName:['', Validators.required],
+      totalFees:['', Validators.required],
+      paidFees:['', Validators.required],
+      remainingFees:['', Validators.required],
+    })
+  }
 }

@@ -61,7 +61,11 @@ export class LoginSignupComponent implements OnInit {
 
       console.log(this.loginForm.value);
       if(this.loginForm.valid) {
-      this._loginService.loginUser(this.loginForm.value)
+      const isLoggedIn = this._loginService.loginUser(this.loginForm.value)
+      if(isLoggedIn) {
+        this._router.navigate(['/stud-dashboard']);
+        this._matSnackBarService.openSnackBar('User logged in succesfully', 'Close');
+      }
       // .subscribe((res:any) => {
       //   if(res) {
       //     this._router.navigate(['/stud-dashboard']);
